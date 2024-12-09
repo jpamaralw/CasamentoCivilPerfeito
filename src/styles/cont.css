@@ -1,0 +1,134 @@
+/* Ajustando o layout do formulário */
+#contact {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contact .input-field {
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#contact .input-field:focus {
+    outline: none;
+    border-color: #ff6f61;
+}
+
+textarea {
+    min-height: 150px;
+}
+
+.btn-submit {
+    padding: 15px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn-submit:hover {
+    background-color: #e05e4b;
+}
+
+/* Melhorias no menu e cabeçalho */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#navbar i#nav_logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6f61;
+    display: flex;
+    align-items: center;
+}
+
+#navbar i#nav_logo::before {
+    content: '\2764'; /* Símbolo de coração */
+    margin-right: 8px;
+    font-size: 30px;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+#navbar ul li a:hover {
+    color: #ff6f61;
+}
+
+/* Ajustes para botões no menu mobile */
+#mobile_menu {
+    display: none;
+}
+
+#navbar button#mobile_btn {
+    display: none;
+}
+
+/* Estilos para os itens do menu em dispositivos móveis */
+@media (max-width: 768px) {
+    #navbar ul {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #fff;
+        width: 60%;
+        border: 1px solid #ccc;
+    }
+
+    #navbar button#mobile_btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    #navbar ul li a {
+        font-size: 18px;
+    }
+
+    #navbar button#mobile_btn.active + #mobile_menu {
+        display: block;
+    }
+}
